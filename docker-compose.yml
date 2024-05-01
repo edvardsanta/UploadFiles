@@ -1,17 +1,57 @@
 version: '3.4'
 
 services:
-  uploadfiles-aot:
+  uploadfiles:
     image: ${DOCKER_REGISTRY-}uploadfiles
     build:
       context: .
       dockerfile: AOT/UploadFiles/Dockerfile
-
-  uploadfiles-jit:
-    image: ${DOCKER_REGISTRY-}uploadfiles
-    build:
-      context: .
-      dockerfile: JIT/UploadFiles/Dockerfile
-
+    # uploadfiles-jit:
+    #   image: ${DOCKER_REGISTRY-}uploadfiles
+    #   build:
+    #     context: .
+    #     dockerfile: JIT/UploadFiles/Dockerfile
+    ports:
+        - 5000:8080
   rabbitmq:
     image: rabbitmq:3.12.9-management-alpine
+    container_name: rabbitmq
+    ports:
+        - 5672:5672
+        - 15672:15672
+
+  influxdb:
+       image: influxdb:2.6-alpine
+       env_file:
+         - influxv2.env
+       ports:
+         - "8086:8086"
+       volumes:
+         - influxdb_data:/var/lib/influxdb2
+       container_name: influxdb
+     
+  telegraf:
+    image: telegraf:1.25-alpine
+    depends_on:
+        - influxdb
+    volumes:
+      # Mount for telegraf config
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    env_file:
+        - influxv2.env
+
+  textconsumer:
+    image: ${DOCKER_REGISTRY-}textconsumer
+    build:
+      context: .
+      dockerfile: TextConsumer/Dockerfile
+
+  ranktext:
+    image: ${DOCKER_REGISTRY-}ranktext
+    build:
+      context: .
+      dockerfile: RankText/Dockerfile
+
+volumes:
+  influxdb_data:
+

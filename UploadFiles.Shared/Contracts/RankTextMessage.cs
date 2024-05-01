@@ -1,10 +1,6 @@
-﻿using System.Text.Json.Serialization;
-
-namespace UploadFiles.Shared.Contracts
+﻿namespace UploadFiles.Shared.Contracts
 {
-    [JsonSerializableAttribute(typeof(RankTextMessage))]
-    public class RankTextMessage
+    public record RankTextMessage(string NormalizedText)
     {
-        public string extractedText {  get; set; } = string.Empty;
     }
 }

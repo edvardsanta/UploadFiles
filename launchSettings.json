@@ -4,7 +4,9 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "uploadfiles": "StartDebugging"
+        "uploadfiles": "StartDebugging",
+        "textconsumer": "StartDebugging",
+        "ranktext": "StartDebugging"
       }
     }
   }

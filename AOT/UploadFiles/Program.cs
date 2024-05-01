@@ -1,43 +1,113 @@
-using Microsoft.AspNetCore.Http.Features;
-using System.Collections.Immutable;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using InfluxDB.Client;
+using MassTransit;
+using Microsoft.AspNetCore.Antiforgery;
+using System.Net.WebSockets;
 using System.Text.Json.Serialization;
-using UploadFiles;
-using UploadFiles.Services.Interfaces;
-using UploadFiles.Services.Services;
+using UploadFiles.Configurations;
+using UploadFiles.Internal;
+using UploadFiles.Services.Services.Upload;
+using UploadFiles.Services.Services.Upload.Models;
+using UploadFiles.Shared.Contracts;
 
 var builder = WebApplication.CreateSlimBuilder(args);
-ImmutableList<IFileHandler> handlers = Configuration.ConfigureFileHandlers();
-builder.Services.Configure<FormOptions>(options =>
-{
-    options.MultipartBodyLengthLimit = 209715200;
-});
-builder.Services.AddScoped<UploadManager>(x => new UploadManager(handlers));
-builder.Services.ConfigureHttpJsonOptions(options =>
-{
-    options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
-});
+
+ServicesConfiguration.ConfigureServices(builder.Services);
+builder.Services.AddCors(CorsConfiguration.ConfigureCors);
+builder.Services.AddAntiforgery(AntiforgeryConfiguration.ConfigureAntiforgery);
+
 WebApplication app = builder.Build();
+app.MapGet("/auth/antiforgerytoken", async (IAntiforgery antiforgery, HttpContext httpContext) =>
+{
+    var tokens = antiforgery.GetAndStoreTokens(httpContext);
+    httpContext.Response.Cookies.Append("XSRF-TOKEN", tokens.RequestToken, new CookieOptions { HttpOnly = false });
+    return Results.Ok(new { token = tokens.RequestToken });
+});
+
 RouteGroupBuilder uploadMap = app.MapGroup("/upload");
-uploadMap.MapPost("/", async (IFormFile file, UploadManager uploadManager) =>
+
+uploadMap.MapPost("/", async (HttpContext httpContext, IFormFileCollection file, UploadManager uploadManager, IAntiforgery antiforgery) =>
 {
     try
     {
-        if (file == null || file.Length == 0)
+        await antiforgery.ValidateRequestAsync(httpContext);
+
+        if (file == null || file.Count() == 0)
         {
             return Results.BadRequest("No file uploaded or file is empty.");
         }
-        await uploadManager.HandleUploadAsync(file);
 
-        return Results.Ok();
+        IList<FileUploadResult>? fileuploadResult  = new List<FileUploadResult>();
+
+        foreach(var item in file)
+        {
+            fileuploadResult.Add(await uploadManager.HandleUploadAsync(item));
+        }
+
+        return Results.Ok(fileuploadResult);
     }
     catch (Exception ex)
     {
         return Results.BadRequest(ex);
     }
-}).DisableAntiforgery();
+});
+
+
+RouteGroupBuilder loginMap = app.MapGroup("/login");
+
+RouteGroupBuilder statusMap = app.MapGroup("/status");
+statusMap.MapGet("/{referenceId}", (string referenceId, IInfluxDBClient i) =>
+{
+    var status = GetStatusFromReferenceId(referenceId); 
+
+    if (status == null)
+    {
+        return Results.NotFound();
+    }
+
+    return Results.Ok(status);
+});
+
+object? GetStatusFromReferenceId(string referenceId)
+{
+    throw new NotImplementedException();
+}
+app.UseCors("AllowSpecificOrigin");
+app.UseWebSockets(new WebSocketOptions
+{
+    KeepAliveInterval = TimeSpan.FromSeconds(120),
+});
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/ws")
+    {
+        if (context.WebSockets.IsWebSocketRequest)
+        {
+            WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+            await new WSHandler().HandleWebSocketAsync(webSocket);
+            
+            var idSocket = WebSocketConnectionManager.AddSocket(webSocket);
+
+            await WebSocketConnectionManager.WaitForSocketToClose(webSocket);
+
+            WebSocketConnectionManager.RemoveSocket(idSocket);
+        }
+        else
+        {
+            context.Response.StatusCode = 400;
+        }
+    }
+    else
+    {
+        await next();
+    }
+});
+app.UseAntiforgery();
 app.Run();
 
-[JsonSerializable(typeof(string))]
+[JsonSourceGenerationOptions(PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
+[JsonSerializable(typeof(NormalizeTextMessage))]
 internal partial class AppJsonSerializerContext : JsonSerializerContext
 {
 

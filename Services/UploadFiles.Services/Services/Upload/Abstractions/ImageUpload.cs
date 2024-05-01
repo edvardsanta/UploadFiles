@@ -9,6 +9,6 @@ namespace UploadFiles.Services.Services.Upload.Abstractions
     {
         public abstract FileTypeExt FileType { get; set; }
 
-        public abstract Task<RankTextMessage> HandleFileAsync(IFormFile file);
+        public abstract Task<NormalizeTextMessage> HandleFileAsync(IFormFile file);
     }
 }

@@ -13,7 +13,7 @@ namespace UploadFiles.Services.Services.Upload
     {
         public override FileTypeExt FileType { get; set; } = (Utils.FileType.Document, FileExtension.DOCX);
 
-        public override async Task<RankTextMessage> HandleFileAsync(IFormFile file)
+        public override async Task<NormalizeTextMessage> HandleFileAsync(IFormFile file)
         {
             using (var stream = file.OpenReadStream())
             {
@@ -30,7 +30,7 @@ namespace UploadFiles.Services.Services.Upload
                     }
                 }
             }
-            return new() { extractedText = "" };
+            return new("");
         }
     }
 }

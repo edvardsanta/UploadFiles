@@ -1,28 +1,698 @@
 Text,Label
-"Problem-solving",Hard
-"Communication",Soft
-"JavaScript programming",Hard
-"Team collaboration",Soft
-"Csharp",Hard
-"C#",Hard
-"Teamwork",Soft
-"Communication",Soft
-"Problem Solving",Soft
-"Leadership",Soft
-"Empathy",Soft
-"Time Management",Soft
-"Creativity",Soft
-"Adaptability",Soft
-"Work Ethic",Soft
-"Stress Management",Soft
-"Python",Hard
-"Rust",Hard
-"JavaScript",Hard
-"Project Management",Hard
-"Data Analysis",Hard
-"Machine Learning",Hard
-"SQL",Hard
-"Excel",Hard
-"Coding",Hard
-"Web Development",Hard
-"UX/UI Design",Hard
+problem-solving,Hard
+communication,Soft
+javascript programming,Hard
+team collaboration,Soft
+csharp,Hard
+teamwork,Soft
+leadership,Soft
+empathy,Soft
+time management,Soft
+creativity,Soft
+adaptability,Soft
+work ethic,Soft
+stress management,Soft
+python,Hard
+rust,Hard
+javascript,Hard
+project management,Hard
+data analysis,Hard
+machine learning,Hard
+sql,Hard
+excel,Hard
+coding,Hard
+web development,Hard
+ux/ui design,Hard
+developer,Hard
+problem-solving techniques,Hard
+algorithms,Hard
+data structures,Hard
+object-oriented programming,Hard
+debugging,Hard
+code optimization,Hard
+version control (Git),Hard
+front-end development,Hard
+back-end development,Hard
+full-stack development,Hard
+agile methodology,Soft
+scrum,Soft
+kanban,Soft
+user experience design,Hard
+user interface design,Hard
+wireframing,Hard
+prototyping,Hard
+usability testing,Hard
+interaction design,Hard
+responsive design,Hard
+cross-browser compatibility,Hard
+computer graphics,Hard
+game development,Hard
+mobile app development,Hard
+iOS development,Hard
+Android development,Hard
+cloud computing,Hard
+distributed systems,Hard
+networking,Hard
+cybersecurity,Hard
+ethical hacking,Hard
+penetration testing,Hard
+risk management,Soft
+financial analysis,Soft
+business intelligence,Hard
+data visualization,Hard
+dashboard design,Hard
+predictive analytics,Hard
+natural language processing,Hard
+computer vision,Hard
+reinforcement learning,Hard
+deep learning,Hard
+neural networks,Hard
+convolutional neural networks,Hard
+recurrent neural networks,Hard
+GANs (Generative Adversarial Networks),Hard
+recommendation systems,Hard
+data preprocessing,Hard
+data cleaning,Hard
+data wrangling,Hard
+feature engineering,Hard
+model evaluation,Hard
+ensemble learning,Hard
+supervised learning,Hard
+unsupervised learning,Hard
+semi-supervised learning,Hard
+reinforcement learning,Hard
+anomaly detection,Hard
+time series analysis,Hard
+dimensionality reduction,Hard
+cluster analysis,Hard
+classification,Hard
+regression analysis,Hard
+association rule learning,Hard
+natural language generation,Hard
+text classification,Hard
+sentiment analysis,Hard
+named entity recognition,Hard
+topic modeling,Hard
+document summarization,Hard
+chatbots,Hard
+virtual assistants,Hard
+speech recognition,Hard
+image recognition,Hard
+object detection,Hard
+image segmentation,Hard
+image captioning,Hard
+sequence-to-sequence models,Hard
+attention mechanisms,Hard
+transformer models,Hard
+BERT (Bidirectional Encoder Representations from Transformers),Hard
+GPT (Generative Pre-trained Transformer),Hard
+word embeddings,Hard
+sequence models,Hard
+recommender systems,Hard
+collaborative filtering,Hard
+content-based filtering,Hard
+matrix factorization,Hard
+hybrid recommendation systems,Hard
+scalability,Hard
+performance optimization,Hard
+database management,Hard
+backend optimization,Hard
+frontend optimization,Hard
+API design,Hard
+RESTful APIs,Hard
+GraphQL,Hard
+microservices architecture,Hard
+serverless architecture,Hard
+containerization,Hard
+Docker,Hard
+Kubernetes,Hard
+continuous integration (CI),Hard
+continuous deployment (CD),Hard
+test-driven development (TDD),Hard
+behavior-driven development (BDD),Hard
+unit testing,Hard
+integration testing,Hard
+end-to-end testing,Hard
+user acceptance testing (UAT),Hard
+test automation,Hard
+test coverage,Hard
+dependency management,Hard
+package management,Hard
+agile project management tools,Hard
+JIRA,Hard
+Trello,Hard
+Asana,Hard
+Scrum Master,Soft
+product owner,Soft
+technical writing,Hard
+technical documentation,Hard
+API documentation,Hard
+user manuals,Hard
+technical specifications,Hard
+research skills,Hard
+data gathering,Hard
+experiment design,Hard
+hypothesis testing,Hard
+statistical analysis,Hard
+A/B testing,Hard
+user research,Hard
+market research,Hard
+competitor analysis,Hard
+customer segmentation,Hard
+customer profiling,Hard
+persona creation,Hard
+user personas,Hard
+target audience analysis,Hard
+data-driven decision making,Hard
+business strategy,Hard
+strategic planning,Hard
+SWOT analysis,Hard
+risk assessment,Hard
+project scoping,Hard
+project planning,Hard
+resource allocation,Hard
+budgeting,Hard
+cost estimation,Hard
+project scheduling,Hard
+timeline management,Hard
+milestone tracking,Hard
+critical path analysis,Hard
+risk mitigation,Hard
+change management,Hard
+stakeholder management,Hard
+communication management,Hard
+conflict resolution,Soft
+negotiation skills,Soft
+persuasion skills,Soft
+emotional intelligence,Soft
+leadership skills,Soft
+motivational skills,Soft
+delegation,Soft
+decision-making,Soft
+problem-solving skills,Hard
+critical thinking,Hard
+analytical skills,Hard
+data-driven decision-making,Hard
+strategic thinking,Hard
+innovation,Soft
+entrepreneurship,Soft
+business development,Soft
+sales skills,Soft
+customer relationship management (CRM),Soft
+client management,Soft
+account management,Soft
+consulting skills,Soft
+presentation skills,Soft
+public speaking,Soft
+technical presentations,Hard
+team leadership,Soft
+team management,Soft
+conflict management,Soft
+performance management,Soft
+mentoring,Soft
+coaching,Soft
+training,Soft
+knowledge sharing,Soft
+cross-functional collaboration,Soft
+multicultural teamwork,Soft
+virtual team management,Soft
+remote team management,Soft
+global team management,Soft
+time management skills,Soft
+priority management,Soft
+task management,Soft
+procrastination management,Soft
+goal setting,Soft
+goal tracking,Soft
+productivity improvement,Soft
+work-life balance,Soft
+self-motivation,Soft
+self-discipline,Soft
+self-awareness,Soft
+self-confidence,Soft
+stress management techniques,Soft
+mindfulness,Soft
+meditation,Soft
+breathing exercises,Soft
+physical exercise,Soft
+healthy lifestyle,Soft
+workplace wellness,Soft
+employee well-being,Soft
+resilience,Soft
+adaptability skills,Soft
+flexibility,Soft
+open-mindedness,Soft
+change readiness,Soft
+emotional resilience,Soft
+coping skills,Soft
+patience,Soft
+creativity techniques,Soft
+brainstorming,Soft
+mind mapping,Soft
+lateral thinking,Soft
+free association,Soft
+visualization,Soft
+design thinking,Soft
+conceptual thinking,Soft
+prototype development,Soft
+experimentation,Soft
+risk-taking,Soft
+failure tolerance,Soft
+learning agility,Soft
+information literacy,Soft
+knowledge management,Soft
+knowledge sharing platforms,Soft
+documentation tools,Hard
+knowledge transfer,Soft
+feedback mechanisms,Soft
+peer feedback,Soft
+360-degree feedback,Soft
+performance appraisals,Soft
+career development,Soft
+professional growth,Soft
+skills development,Soft
+training programs,Soft
+learning resources,Soft
+online courses,Soft
+webinars,Soft
+workshops,Soft
+seminars,Soft
+conferences,Soft
+certifications,Soft
+accreditations,Soft
+continuous learning,Soft
+industry knowledge,Soft
+domain expertise,Soft
+subject matter expertise,Soft
+technical expertise,Soft
+specialized skills,Soft
+generalist skills,Soft
+cross-disciplinary skills,Soft
+multi-disciplinary skills,Soft
+interdisciplinary skills,Soft
+collaboration tools,Hard
+virtual collaboration,Hard
+remote collaboration,Hard
+online collaboration,Hard
+digital collaboration,Hard
+team communication,Hard
+project communication,Hard
+real-time communication,Hard
+video conferencing,Hard
+chat applications,Hard
+collaborative document editing,Hard
+file sharing,Hard
+version control systems,Hard
+collaborative coding platforms,Hard
+pair programming,Hard
+mob programming,Hard
+code reviews,Hard
+bug tracking systems,Hard
+issue tracking systems,Hard
+project management software,Hard
+task management tools,Hard
+Kanban boards,Hard
+Gantt charts,Hard
+time tracking software,Hard
+productivity tools,Hard
+automation tools,Hard
+workflow management systems,Hard
+data management tools,Hard
+analytics platforms,Hard
+visualization tools,Hard
+reporting tools,Hard
+business intelligence tools,Hard
+customer relationship management (CRM) software,Hard
+enterprise resource planning (ERP) software,Hard
+supply chain management (SCM) software,Hard
+human resource management (HRM) software,Hard
+learning management systems (LMS),Hard
+content management systems (CMS),Hard
+e-commerce platforms,Hard
+payment processing systems,Hard
+customer support systems,Hard
+ticketing systems,Hard
+knowledge bases,Hard
+FAQ systems,Hard
+community forums,Hard
+social media management tools,Hard
+content creation tools,Hard
+graphic design software,Hard
+video editing software,Hard
+audio editing software,Hard
+animation software,Hard
+3D modeling software,Hard
+virtual reality (VR) software,Hard
+augmented reality (AR) software,Hard
+simulation software,Hard
+gamification platforms,Hard
+digital marketing tools,Hard
+SEO tools,Hard
+content marketing tools,Hard
+email marketing software,Hard
+social media marketing software,Hard
+marketing automation platforms,Hard
+customer analytics tools,Hard
+customer feedback tools,Hard
+market research tools,Hard
+competitive intelligence tools,Hard
+sales automation software,Hard
+lead generation tools,Hard
+lead management software,Hard
+customer service software,Hard
+helpdesk software,Hard
+live chat software,Hard
+call center software,Hard
+ticket management systems,Hard
+customer experience management (CXM) software,Hard
+brand management tools,Hard
+reputation management software,Hard
+digital asset management (DAM) software,Hard
+video conferencing platforms,Hard
+web conferencing platforms,Hard
+online meeting software,Hard
+virtual event platforms,Hard
+webinar platforms,Hard
+virtual classroom software,Hard
+e-learning platforms,Hard
+online training software,Hard
+course authoring tools,Hard
+learning experience platforms (LXP),Hard
+corporate training software,Hard
+employee onboarding software,Hard
+talent management software,Hard
+performance management software,Hard
+employee engagement software,Hard
+workforce management software,Hard
+time and attendance software,Hard
+recruitment software,Hard
+applicant tracking systems (ATS),Hard
+employee referral software,Hard
+human capital management (HCM) software,Hard
+employee recognition software,Hard
+employee wellness platforms,Hard
+health and safety software,Hard
+compliance management software,Hard
+document management systems (DMS),Hard
+digital signature software,Hard
+workflow automation software,Hard
+business process management (BPM) software,Hard
+enterprise content management (ECM) software,Hard
+knowledge management software,Hard
+records management software,Hard
+enterprise search software,Hard
+data governance software,Hard
+data quality management software,Hard
+data integration software,Hard
+data migration software,Hard
+data replication software,Hard
+master data management (MDM) software,Hard
+data catalog software,Hard
+data virtualization software,Hard
+data warehousing software,Hard
+data lake software,Hard
+data visualization software,Hard
+business intelligence (BI) software,Hard
+predictive analytics software,Hard
+prescriptive analytics software,Hard
+descriptive analytics software,Hard
+text analytics software,Hard
+social media analytics software,Hard
+customer analytics software,Hard
+market research software,Hard
+competitive intelligence software,Hard
+supply chain analytics software,Hard
+financial analytics software,Hard
+healthcare analytics software,Hard
+retail analytics software,Hard
+manufacturing analytics software,Hard
+logistics analytics software,Hard
+sales analytics software,Hard
+marketing analytics software,Hard
+customer relationship management (CRM) software,Hard
+sales force automation (SFA) software,Hard
+marketing automation software,Hard
+customer service software,Hard
+help desk software,Hard
+live chat software,Hard
+call center software,Hard
+social media monitoring software,Hard
+community management software,Hard
+brand management software,Hard
+reputation management software,Hard
+digital asset management (DAM) software,Hard
+content management systems (CMS),Hard
+web content management (WCM) software,Hard
+enterprise content management (ECM) software,Hard
+document management software,Hard
+knowledge management software,Hard
+workflow automation software,Hard
+business process management (BPM) software,Hard
+project management software,Hard
+task management software,Hard
+time tracking software,Hard
+resource management software,Hard
+portfolio management software,Hard
+issue tracking software,Hard
+risk management software,Hard
+change management software,Hard
+configuration management software,Hard
+test management software,Hard
+quality management software,Hard
+compliance management software,Hard
+incident management software,Hard
+service desk software,Hard
+ticketing software,Hard
+knowledge base software,Hard
+IT asset management (ITAM) software,Hard
+configuration management database (CMDB) software,Hard
+network management software,Hard
+system monitoring software,Hard
+application performance management (APM) software,Hard
+log management software,Hard
+security information and event management (SIEM) software,Hard
+identity and access management (IAM) software,Hard
+data loss prevention (DLP) software,Hard
+encryption software,Hard
+firewall software,Hard
+intrusion detection system (IDS) software,Hard
+intrusion prevention system (IPS) software,Hard
+antivirus software,Hard
+antimalware software,Hard
+endpoint security software,Hard
+web security software,Hard
+email security software,Hard
+cloud security software,Hard
+mobile security software,Hard
+network security software,Hard
+application security software,Hard
+database security software,Hard
+endpoint detection and response (EDR) software,Hard
+security information and event management (SIEM) software,Hard
+threat intelligence software,Hard
+vulnerability management software,Hard
+patch management software,Hard
+security orchestration automation and response (SOAR) software,Hard
+security analytics software,Hard
+security operations center (SOC) software,Hard
+secure web gateways (SWGs),Hard
+data loss prevention (DLP) software,Hard
+cloud access security brokers (CASBs),Hard
+secure email gateways (SEGs),Hard
+web application firewalls (WAFs),Hard
+network access control (NAC) software,Hard
+database activity monitoring (DAM) software,Hard
+user and entity behavior analytics (UEBA) software,Hard
+security awareness training software,Hard
+security posture assessment software,Hard
+penetration testing software,Hard
+security scanning tools,Hard
+security auditing tools,Hard
+incident response software,Hard
+business continuity planning (BCP) software,Hard
+disaster recovery planning (DRP) software,Hard
+emergency notification software,Hard
+crisis management software,Hard
+risk assessment software,Hard
+compliance management software,Hard
+audit management software,Hard
+policy management software,Hard
+regulatory reporting software,Hard
+regulatory compliance software,Hard
+GDPR compliance software,Hard
+HIPAA compliance software,Hard
+SOX compliance software,Hard
+PCI DSS compliance software,Hard
+FERPA compliance software,Hard
+COPPA compliance software,Hard
+ISO compliance software,Hard
+quality management software,Hard
+document control software,Hard
+training management software,Hard
+regulatory change management software,Hard
+supplier management software,Hard
+customer complaint management software,Hard
+process mapping software,Hard
+root cause analysis software,Hard
+corrective action software,Hard
+preventive action software,Hard
+internal audit management software,Hard
+external audit management software,Hard
+third-party risk management software,Hard
+vendor risk management software,Hard
+business process management software,Hard
+workflow automation software,Hard
+process mining software,Hard
+digital transformation software,Hard
+RPA (Robotic Process Automation) software,Hard
+low-code development platforms,Hard
+no-code development platforms,Hard
+API management platforms,Hard
+event-driven architecture (EDA) software,Hard
+microservices architecture software,Hard
+SOA (Service-Oriented Architecture) software,Hard
+legacy system modernization software,Hard
+cloud migration software,Hard
+multi-cloud management software,Hard
+hybrid cloud management software,Hard
+cloud cost management software,Hard
+cloud security posture management (CSPM) software,Hard
+container orchestration platforms,Hard
+serverless computing platforms,Hard
+big data analytics software,Hard
+data lakes and warehouses,Hard
+data integration and ETL tools,Hard
+data governance and metadata management software,Hard
+streaming analytics software,Hard
+NoSQL databases,Hard
+graph databases,Hard
+key-value stores,Hard
+column-family stores,Hard
+document databases,Hard
+distributed file systems,Hard
+Hadoop ecosystem tools,Hard
+Spark ecosystem tools,Hard
+Kafka ecosystem tools,Hard
+data warehousing platforms,Hard
+ETL (Extract, Transform, Load) tools,Hard
+business intelligence (BI) platforms,Hard
+OLAP (Online Analytical Processing) tools,Hard
+data mining tools,Hard
+predictive analytics tools,Hard
+prescriptive analytics tools,Hard
+descriptive analytics tools,Hard
+data visualization tools,Hard
+dashboarding tools,Hard
+reporting tools,Hard
+self-service BI tools,Hard
+enterprise BI platforms,Hard
+cloud BI platforms,Hard
+AI-powered BI tools,Hard
+data discovery tools,Hard
+data storytelling tools,Hard
+data preparation tools,Hard
+data profiling tools,Hard
+data quality tools,Hard
+data lineage tools,Hard
+master data management (MDM) software,Hard
+data governance tools,Hard
+metadata management tools,Hard
+reference data management (RDM) software,Hard
+data catalog software,Hard
+data stewardship tools,Hard
+data privacy tools,Hard
+data security tools,Hard
+data masking software,Hard
+data encryption software,Hard
+data anonymization tools,Hard
+data loss prevention (DLP) software,Hard
+data breach detection tools,Hard
+data access governance tools,Hard
+data compliance software,Hard
+data monitoring tools,Hard
+data archiving software,Hard
+data lifecycle management (DLM) software,Hard
+data replication software,Hard
+data synchronization tools,Hard
+data backup and recovery software,Hard
+data recovery tools,Hard
+high availability solutions,Hard
+disaster recovery solutions,Hard
+backup as a service (BaaS) solutions,Hard
+disaster recovery as a service (DRaaS) solutions,Hard
+cloud backup solutions,Hard
+database backup solutions,Hard
+file backup solutions,Hard
+virtual machine backup solutions,Hard
+endpoint backup solutions,Hard
+continuous data protection (CDP) solutions,Hard
+incremental backup solutions,Hard
+full backup solutions,Hard
+synthetic backup solutions,Hard
+differential backup solutions,Hard
+mirroring solutions,Hard
+replication solutions,Hard
+business continuity solutions,Hard
+data replication solutions,Hard
+data migration solutions,Hard
+data transformation solutions,Hard
+data cleansing solutions,Hard
+data enrichment solutions,Hard
+data deduplication solutions,Hard
+data matching solutions,Hard
+data integration solutions,Hard
+data federation solutions,Hard
+data synchronization solutions,Hard
+data virtualization solutions,Hard
+data streaming solutions,Hard
+data ingestion solutions,Hard
+data extraction solutions,Hard
+data loading solutions,Hard
+real-time data processing solutions,Hard
+batch processing solutions,Hard
+streaming analytics solutions,Hard
+data enrichment solutions,Hard
+data transformation solutions,Hard
+data preparation solutions,Hard
+data blending solutions,Hard
+data modeling solutions,Hard
+data governance solutions,Hard
+data quality solutions,Hard
+data lineage solutions,Hard
+master data management (MDM) solutions,Hard
+metadata management solutions,Hard
+data catalog solutions,Hard
+data stewardship solutions,Hard
+data privacy solutions,Hard
+data security solutions,Hard
+data encryption solutions,Hard
+data anonymization solutions,Hard
+data masking solutions,Hard
+data loss prevention (DLP) solutions,Hard
+data breach detection solutions,Hard
+data access governance solutions,Hard
+data compliance solutions,Hard
+data monitoring solutions,Hard
+data archiving solutions,Hard
+data lifecycle management (DLM) solutions,Hard
+data replication solutions,Hard
+data synchronization solutions,Hard
+data backup and recovery solutions,Hard
+data recovery solutions,Hard
+high availability solutions,Hard
+disaster recovery solutions,Hard
+backup as a service (BaaS) solutions,Hard
+disaster recovery as a service (DRaaS) solutions,Hard
+cloud backup solutions,Hard
+database backup solutions,Hard
+file backup solutions,Hard
+virtual machine backup solutions,Hard
+endpoint backup solutions,Hard
+continuous data protection (CDP) solutions,Hard
+incremental backup solutions,Hard
+full backup solutions,Hard
+synthetic backup solutions,Hard
+differential backup solutions,Hard
+mirroring solutions,Hard
+replication solutions,Hard
+business continuity solutions,Hard

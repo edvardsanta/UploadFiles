@@ -7,6 +7,6 @@ namespace UploadFiles.Services.Interfaces
     public interface IFileHandler
     {
         FileTypeExt FileType { get; }
-        Task<RankTextMessage> HandleFileAsync(IFormFile file);
+        Task<NormalizeTextMessage> HandleFileAsync(IFormFile file);
     }
 }

@@ -27,32 +27,44 @@ namespace UploadFiles.Services.Services.Upload
 
                 IFileHandler? handler = _fileHandlers.FirstOrDefault(h => h.FileType == fileType);
 
+                bool fileSentToProcess = false;
                 if (handler != null)
                 {
-                    RankTextMessage rankMessageToSend = await handler.HandleFileAsync(file);
+                    NormalizeTextMessage rankMessageToSend = await handler.HandleFileAsync(file);
 
                     if (_publishEndpoint != null)
+                    {
                         await _publishEndpoint.Publish(rankMessageToSend);
+                        fileSentToProcess = true;
+                    }
+                    return CreateFileUploadResult(true, fileSentToProcess, file, fileType);
 
                 }
-                else
-                {
-                }
-
-                return new FileUploadResult(
-                true,
-                false,
-                file.FileName,
-                fileType.type.ToString(),
-                fileType.ext.ToString(),
-                DateTime.UtcNow
-                );
+                return CreateFileUploadResult(false, false, file, fileType);
             }
             catch(Exception ex)
             {
-                return null;
+                return CreateFileUploadResult(false, false, file);
             }     
         }
+
+
+        private FileUploadResult CreateFileUploadResult(
+        bool successExtracted,
+        bool fileSentToProcess,
+        IFormFile file,
+        FileTypeExt fileType = default)
+        {
+            return new FileUploadResult(
+                successExtracted,
+                fileSentToProcess,
+                file.FileName,
+                fileType.type.ToString() ?? "",
+                fileType.ext.ToString() ?? "",
+                DateTime.UtcNow
+            );
+        }
+
 
         private FileTypeExt DetermineFileTypeExt(IFormFile file)
         {

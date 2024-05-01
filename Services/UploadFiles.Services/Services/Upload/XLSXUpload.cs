@@ -20,7 +20,7 @@ namespace UploadFiles.Services.Services.Upload
         /// </summary>
         /// <param name="file">The uploaded file</param>
         /// <returns>A task</returns>  
-        public async override Task<RankTextMessage> HandleFileAsync(IFormFile file)
+        public async override Task<NormalizeTextMessage> HandleFileAsync(IFormFile file)
         {
             using var stream = new MemoryStream();
             await file.CopyToAsync(stream);
@@ -41,7 +41,7 @@ namespace UploadFiles.Services.Services.Upload
                 string result = text.ToString();
             }
 
-            return new() { extractedText = "" };
+            return new("");
         }
     }
 }

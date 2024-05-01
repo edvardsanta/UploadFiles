@@ -10,11 +10,15 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="appsettings.Sample.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="appsettings.Sample.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 

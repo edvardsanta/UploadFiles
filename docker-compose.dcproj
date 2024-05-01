@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>43129433-ec1c-4878-a536-ca06b7a9bb5d</ProjectGuid>
+    <ProjectGuid>a78371e8-3cb7-4a46-aab6-45b3171d823d</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/todos</DockerServiceUrl>
     <DockerServiceName>uploadfiles</DockerServiceName>

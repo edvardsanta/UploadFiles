@@ -13,7 +13,7 @@ namespace UploadFiles.Services.Services.Upload
     {
         public override FileTypeExt FileType { get; set; } = (Utils.FileType.Document, FileExtension.PDF);
 
-        public async override Task<RankTextMessage> HandleFileAsync(IFormFile file)
+        public async override Task<NormalizeTextMessage> HandleFileAsync(IFormFile file)
         {
             using var stream = new MemoryStream();
             await file.CopyToAsync(stream);
@@ -29,7 +29,7 @@ namespace UploadFiles.Services.Services.Upload
                 text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
             }
             string result = text.ToString();
-            return new() { extractedText = result };
+            return new(result);
         }
     }
 }
